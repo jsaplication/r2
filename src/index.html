@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JShostorage</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" integrity="sha512-0/rEDduZGrqo4riUlwqyuHDQzp2D1ZCgH/gFIfjMIL5az8so6ZiXyhf1Rg8i6xsjv+z/Ubc4tt1thLigEcu6Ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    
+    <input type="file" id="fileInput" class="js-upload-input" multiple='multiple'/ style="display: none;">
+   
+   
+
+
+<div class="container flex-grow-1 light-style container-p-y">
+    <div class="container-m-nx container-m-ny bg-lightest mb-3">
+        <ol class="breadcrumb text-big container-p-x py-3 m-0" id="routes">
+            <li class="breadcrumb-item" onclick="home()">
+                <a href="javascript:void(0)">home</a>
+            </li>
+          <!--   <li class="breadcrumb-item">
+                <a href="javascript:void(0)">projects</a>
+            </li>
+            <li class="breadcrumb-item active">site</li> -->
+        </ol>
+
+        <hr class="m-0" />
+
+        <div class="file-manager-actions container-p-x py-2">
+            <div>
+                <button type="button" class="btn btn-primary mr-2" onclick="button_upload(this)"><i class="ion ion-md-cloud-upload"></i>&nbsp; Upload</button>
+                <button type="button" class="btn btn-primary mr-2" onclick="button_newfolder(this)"><i class="ion ion-md-add"></i>&nbsp; NewFolder</button>
+                <button type="button" class="btn btn-secondary icon-btn mr-2" disabled=""><i class="ion ion-md-cloud-download"></i></button>
+                <div class="btn-group mr-2">
+                    <button type="button" class="btn btn-default md-btn-flat dropdown-toggle px-2" data-toggle="dropdown"><i class="ion ion-ios-settings"></i></button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="javascript:void(0)">Move</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Copy</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Remove</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-default icon-btn md-btn-flat active"> <input type="radio" name="file-manager-view" value="file-manager-col-view" checked="" /> <span class="ion ion-md-apps"></span> </label>
+                    <label class="btn btn-default icon-btn md-btn-flat"> <input type="radio" name="file-manager-view" value="file-manager-row-view" /> <span class="ion ion-md-menu"></span> </label>
+                </div>
+            </div>
+        </div>
+
+        <hr class="m-0" />
+    </div>
+
+
+     <div class="js-uploads"></div>
+
+
+
+    <div class="file-manager-container file-manager-col-view loadfiles">
+        <div class="file-manager-row-header">
+            <div class="file-item-name pb-2">Filename</div>
+            <div class="file-item-changed pb-2">Changed</div>
+        </div>
+
+        <div class="file-item">
+            <div class="file-item-icon file-item-level-up fas fa-level-up-alt text-secondary"></div>
+            <a href="javascript:void(0)" class="file-item-name"></a>
+        </div>
+     
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="js/fileicon.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsencoder@1.0.1/index.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jsencoder@1.0.1/index.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js'></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

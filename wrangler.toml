@@ -1,0 +1,17 @@
+name = "host-js"
+account_id = "1a8d7ab249c3adee6e6b4eeccf8ff123"
+workers_dev = true
+compatibility_date = "2024-08-06"
+
+# Especificando o ponto de entrada
+main = "./src/index.js"
+
+# Configuração do bucket R2
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "host-js" # Nome do bucket R2 em produção
+
+[env.production]
+workers_dev = false
+zone_id = "seu_zone_id"  # Substitua pelo ID da sua zona
+route = "meusite.com/*"  # Substitua pela rota do seu domínio
